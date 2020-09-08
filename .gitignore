@@ -1,1 +1,4 @@
-.idea
+/.idea
+/target
+/test-output
+/first_appium_test.iml
