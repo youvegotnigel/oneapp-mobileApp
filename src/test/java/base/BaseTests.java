@@ -1,3 +1,5 @@
+package base;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
@@ -7,7 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.TokenPage;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -23,13 +27,12 @@ import java.net.URL;
  **/
 
 
-public class LandingPageTest {
-
-    private final String menuItemNamePlaceholder = "#menuItemName";
-    private final String menuItemXpath = "//android.widget.TextView[@content-desc=\"" + menuItemNamePlaceholder + "\"]";
+public class BaseTests {
 
     public AndroidDriver<MobileElement> driver;
     public WebDriverWait wait;
+
+    public TokenPage tokenPage;
 
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -37,9 +40,16 @@ public class LandingPageTest {
         String ANDROID_APK_PATH = "/src/test/resources/app-debug-qa.apk";
 
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("deviceName", "Samsung");
+        //Virtual Device
+        caps.setCapability("deviceName", "Pixel 2");
         caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "10.0.0");
+        caps.setCapability("platformVersion", "11");
+
+        //Read Device
+//        caps.setCapability("deviceName", "Samsung");
+//        caps.setCapability("platformName", "Android");
+//        caps.setCapability("platformVersion", "10.0.0");
+
         caps.setCapability("app", new File(PROJECT_ROOT + ANDROID_APK_PATH).getAbsolutePath());
         caps.setCapability("appPackage", "com.ncinga.nfactory.on.the.go.mobile");
         caps.setCapability("appActivity", "com.ncinga.nfactory.on.the.go.mobile.MainActivity");
@@ -50,13 +60,15 @@ public class LandingPageTest {
 
         driver = new AndroidDriver<MobileElement>(url, caps);
         wait = new WebDriverWait(driver, 10);
+
+        goHome();
     }
 
-    @Test
-    public void enterToken() {
-        // Verify Views menu item is visible
-
+    @BeforeMethod
+    public void goHome(){
+        tokenPage = new TokenPage(driver);
     }
+
 
     @AfterClass
     public void teardown() {
