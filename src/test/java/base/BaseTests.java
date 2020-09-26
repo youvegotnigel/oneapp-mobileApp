@@ -45,7 +45,7 @@ public class BaseTests {
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "11");
 
-        //Read Device
+        //Real Device
 //        caps.setCapability("deviceName", "Samsung");
 //        caps.setCapability("platformName", "Android");
 //        caps.setCapability("platformVersion", "10.0.0");
