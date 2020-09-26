@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="one-app-mobile-automation">
+        <classes>
+            <class name="login.LoginTests">
+                <methods>
+                    <include name="verifyInvalidToken"/>
+                    <include name="verifyEmptyUsernameAndPassword"/>
+                    <include name="verifyEmptyUsername"/>
+                    <include name="verifyEmptyPassword"/>
+                    <include name="verifyInvalidCredentials"/>
+                    <include name="verifySuccessfulLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
