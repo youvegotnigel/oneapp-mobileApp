@@ -32,7 +32,7 @@ public class LoginTests extends BaseTests {
     @Test(priority=2)
     public void verifyEmptyUsernameAndPassword(){
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         tokenPage.setToken("mobile");
         tokenPage.clickContinue();
 
