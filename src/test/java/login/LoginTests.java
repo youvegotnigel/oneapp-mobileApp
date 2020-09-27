@@ -29,12 +29,20 @@ public class LoginTests extends BaseTests {
     @Test(priority=1, description="Verify invalid token entry")
     @Description("Verify invalid token entry")
     @Severity(SeverityLevel.MINOR)
-    public void verifyInvalidToken(){
+    public void verifyInvalidToken() throws InterruptedException {
+
         tokenPage.setToken("mobile123");
         tokenPage.clickContinue();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-        //System.out.println("1.Error msg: " + tokenPage.getErrorMessage());
+        /**
+         *  need to find a solution for the wait issues.
+         *  element is found in debug mode but missed on the run.
+         */
+        //driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        //tokenPage.explicitWaitForErrorMessage();
+        Thread.sleep(5000);
+
+        System.out.println("1.Error msg: " + tokenPage.getErrorMessage());
         Assert.assertEquals(tokenPage.getErrorMessage(),"Activation failed. Please check whether you have entered correct token or contact you system administrator","Invalid token entered");
     }
 
@@ -43,9 +51,11 @@ public class LoginTests extends BaseTests {
     @Severity(SeverityLevel.CRITICAL)
     public void verifyEmptyUsernameAndPassword(){
 
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
         tokenPage.setToken("mobile");
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         tokenPage.clickContinue();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         LoginPage login = tokenPage.goToLoginPage();
         Assert.assertEquals(login.getPageHeaderName(),"Member Login","Verify landing page");

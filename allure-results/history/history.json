@@ -1,4 +1,23 @@
 {
+  "56090885bfa5fa90a9d926ad436a11dd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d9ec9298df86440f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601215236506,
+        "stop" : 1601215238572,
+        "duration" : 2066
+      }
+    } ]
+  },
   "d2905156530cbfb7ec158af69a7b8e39" : {
     "statistic" : {
       "failed" : 0,
@@ -9,52 +28,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7f41b4de91d9fdbf",
+      "uid" : "d268707972e3ad77",
       "status" : "passed",
       "time" : {
-        "start" : 1601184943584,
-        "stop" : 1601184945872,
-        "duration" : 2288
-      }
-    } ]
-  },
-  "56090885bfa5fa90a9d926ad436a11dd" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "8eae60a8eeaed678",
-      "status" : "broken",
-      "statusDetails" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'MSI', ip: '192.168.8.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., databaseEnabled: false, desired: {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., deviceName: Pixel 2, fullReset: false, noReset: false, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: b413f219-6996-4cb4-ab72-27579559c233\n*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]}",
-      "time" : {
-        "start" : 1601184919929,
-        "stop" : 1601184931574,
-        "duration" : 11645
-      }
-    } ]
-  },
-  "7a4f3788a4ffdeb9288605cea878025c" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "87f7fbeaae8ce0f5",
-      "status" : "broken",
-      "statusDetails" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'MSI', ip: '192.168.8.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., databaseEnabled: false, desired: {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., deviceName: Pixel 2, fullReset: false, noReset: false, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: b413f219-6996-4cb4-ab72-27579559c233\n*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]}",
-      "time" : {
-        "start" : 1601184907958,
-        "stop" : 1601184919922,
-        "duration" : 11964
+        "start" : 1601215245366,
+        "stop" : 1601215247215,
+        "duration" : 1849
       }
     } ]
   },
@@ -68,12 +47,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a706bc62b3f1ef36",
+      "uid" : "99ef580d47044829",
       "status" : "passed",
       "time" : {
-        "start" : 1601184939425,
-        "stop" : 1601184943580,
-        "duration" : 4155
+        "start" : 1601215241536,
+        "stop" : 1601215245360,
+        "duration" : 3824
+      }
+    } ]
+  },
+  "7a4f3788a4ffdeb9288605cea878025c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "971900c1019ef194",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601215226718,
+        "stop" : 1601215236499,
+        "duration" : 9781
       }
     } ]
   },
@@ -87,32 +85,41 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c9f70da8d188df23",
+      "uid" : "53c5bfaafe9b4e92",
       "status" : "passed",
       "time" : {
-        "start" : 1601184931582,
-        "stop" : 1601184939419,
-        "duration" : 7837
+        "start" : 1601215238579,
+        "stop" : 1601215241528,
+        "duration" : 2949
       }
     } ]
   },
   "33752feb08a003bfadbdc4a4b7468678" : {
     "statistic" : {
       "failed" : 1,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
-      "uid" : "fb455271afef1d59",
+      "uid" : "da8d49166fed794c",
       "status" : "failed",
       "statusDetails" : "Invalid token entered expected [Activation failed. Please check whether you have entered correct token or contact you system administrator] but found []",
       "time" : {
-        "start" : 1601184896920,
-        "stop" : 1601184907919,
-        "duration" : 10999
+        "start" : 1601215213264,
+        "stop" : 1601215226641,
+        "duration" : 13377
+      }
+    }, {
+      "uid" : "fb41d96164b0b292",
+      "status" : "broken",
+      "statusDetails" : "Expected condition failed: waiting for visibility of element located by By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[5] (tried for 30 second(s) with 500 milliseconds interval)",
+      "time" : {
+        "start" : 1601214939555,
+        "stop" : 1601214990632,
+        "duration" : 51077
       }
     } ]
   }

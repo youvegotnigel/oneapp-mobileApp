@@ -42,10 +42,15 @@ public class TokenPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
+    //explicit wait
+    public void explicitWaitForErrorMessage(){
+
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(errorMessage));
+    }
+
     //error message for invalid token entry
     public String getErrorMessage(){
-        WebDriverWait wait = new WebDriverWait(driver,30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
         return driver.findElement(errorMessage).getText();
     }
 

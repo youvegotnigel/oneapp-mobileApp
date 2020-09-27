@@ -11,26 +11,6 @@ import org.testng.ITestResult;
 
 public class AllureListener implements ITestListener {
 
-    private static String getTestMethodName(ITestResult iTestResult) {
-        return iTestResult.getMethod().getConstructorOrMethod().getName();
-    }
-
-    @Attachment
-    public byte[] saveFailureScreenShot(WebDriver driver) {
-        return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-    }
-
-    @Attachment(value = "{0}", type = "text/plain")
-    public static String saveTextLog(String message) {
-        return message;
-    }
-
-    @Override
-    public void onStart(ITestContext iTestContext) {
-        System.out.println("I am in onStart method " + iTestContext.getName());
-        iTestContext.setAttribute("WebDriver", BaseTests.getDriver());
-    }
-
     @Override
     public void onFinish(ITestContext iTestContext) {
         System.out.println("I am in onFinish method " + iTestContext.getName());
@@ -39,6 +19,34 @@ public class AllureListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult iTestResult) {
         System.out.println("I am in onTestStart method " + getTestMethodName(iTestResult) + " start");
+    }
+
+    private static String getTestMethodName(ITestResult iTestResult) {
+        return iTestResult.getMethod().getConstructorOrMethod().getName();
+    }
+
+    // Text attachments for Allure
+    @Attachment(value = "Page screenshot", type = "image/png")
+    public byte[] saveScreenshotPNG(WebDriver driver) {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    // Text attachments for Allure
+    @Attachment(value = "{0}", type = "text/plain")
+    public static String saveTextLog(String message) {
+        return message;
+    }
+
+    // HTML attachments for Allure
+    @Attachment(value = "{0}", type = "text/html")
+    public static String attachHtml(String html) {
+        return html;
+    }
+
+    @Override
+    public void onStart(ITestContext iTestContext) {
+        System.out.println("I am in onStart method " + iTestContext.getName());
+        iTestContext.setAttribute("WebDriver", BaseTests.getDriver());
     }
 
     @Override
@@ -51,14 +59,14 @@ public class AllureListener implements ITestListener {
         System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
         Object testClass = iTestResult.getInstance();
         WebDriver driver = BaseTests.getDriver();
-        // Allure ScreenShot and SaveTestLog
+        // Allure ScreenShotRobot and SaveTestLog
         if (driver instanceof WebDriver) {
             System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
-            saveFailureScreenShot(driver);
+            saveScreenshotPNG(driver);
         }
+        // Save a log on allure.
         saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");
     }
-
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
@@ -69,4 +77,6 @@ public class AllureListener implements ITestListener {
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
         System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
     }
+
+
 }
