@@ -2,6 +2,7 @@ package base;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,6 +30,9 @@ public class BaseTests {
 
     public AndroidDriver<MobileElement> driver;
     public WebDriverWait wait;
+
+    //create a thread driver
+    public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 
     public TokenPage tokenPage;
 
@@ -72,5 +76,17 @@ public class BaseTests {
     public void teardown() {
         driver.quit();
     }
+
+    //initialize the driver to create a tread
+    public WebDriver initialize_driver() {
+        tdriver.set(driver);
+        return getDriver();
+    }
+
+    //pass the driver in thread
+    public static synchronized WebDriver getDriver() {
+        return tdriver.get();
+    }
+
 
 }
