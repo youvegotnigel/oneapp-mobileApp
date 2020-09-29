@@ -9,6 +9,11 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+/**
+ * @author  : youvegotnigel
+ *
+ */
+
 public class AllureListener implements ITestListener {
 
     @Override

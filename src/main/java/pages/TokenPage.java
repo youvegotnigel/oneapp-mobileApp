@@ -8,13 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Project Name    : second_appium_test
- * Developer       : youvegotnigel
- * Version         : 1.0.1
- * Date            : 09/26/2020
- * Time            : 12:55 PM
- * Description     : Add new class
- **/
+ * @author  : youvegotnigel
+ *
+ */
 
 public class TokenPage {
 

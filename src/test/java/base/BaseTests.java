@@ -17,14 +17,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * Project Name    : second_appium_test
- * Developer       : youvegotnigel
- * Version         : 1.0.0
- * Date            : 09/08/2020
- * Time            : 10:55 AM
- * Description     :
- **/
-
+ * @author  : youvegotnigel
+ *
+ */
 
 public class BaseTests {
 

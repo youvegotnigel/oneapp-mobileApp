@@ -7,13 +7,9 @@ import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
 
 /**
- * Project Name    : second_appium_test
- * Developer       : youvegotnigel
- * Version         : 1.0.1
- * Date            : 09/27/2020
- * Time            : 08:55 PM
- * Description     : Add new class
- **/
+ * @author  : youvegotnigel
+ *
+ */
 
 public class HomePageTest extends BaseTests {
 

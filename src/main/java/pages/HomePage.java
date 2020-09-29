@@ -4,13 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Project Name    : second_appium_test
- * Developer       : youvegotnigel
- * Version         : 1.0.1
- * Date            : 09/26/2020
- * Time            : 12:55 PM
- * Description     : Add new class
- **/
+ * @author  : youvegotnigel
+ *
+ */
 
 public class HomePage {
 
