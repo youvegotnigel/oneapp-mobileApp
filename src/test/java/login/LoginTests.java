@@ -42,20 +42,18 @@ public class LoginTests extends BaseTests {
         //tokenPage.explicitWaitForErrorMessage();
         Thread.sleep(5000);
 
-        System.out.println("1.Error msg: " + tokenPage.getErrorMessage());
+        //System.out.println("1.Error msg: " + tokenPage.getErrorMessage());
         Assert.assertEquals(tokenPage.getErrorMessage(),"Activation failed. Please check whether you have entered correct token or contact you system administrator","Invalid token entered");
     }
 
     @Test(priority=2, description="Verify invalid login")
     @Description("Verify invalid login")
     @Severity(SeverityLevel.CRITICAL)
-    public void verifyEmptyUsernameAndPassword(){
-
+    public void verifyEmptyUsernameAndPassword() throws InterruptedException {
 
         tokenPage.setToken("mobile");
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         tokenPage.clickContinue();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         LoginPage login = tokenPage.goToLoginPage();
         Assert.assertEquals(login.getPageHeaderName(),"Member Login","Verify landing page");
@@ -142,8 +140,5 @@ public class LoginTests extends BaseTests {
         login.setPassword("zuno-86");
         login.clickLoginBtn();
 
-
     }
-
-
 }

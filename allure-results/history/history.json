@@ -9,12 +9,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "d9ec9298df86440f",
+      "uid" : "690c308ccaf19180",
       "status" : "passed",
       "time" : {
-        "start" : 1601215236506,
-        "stop" : 1601215238572,
-        "duration" : 2066
+        "start" : 1601379836442,
+        "stop" : 1601379839027,
+        "duration" : 2585
       }
     } ]
   },
@@ -28,31 +28,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "d268707972e3ad77",
+      "uid" : "1b1a531ebadd5b1",
       "status" : "passed",
       "time" : {
-        "start" : 1601215245366,
-        "stop" : 1601215247215,
-        "duration" : 1849
-      }
-    } ]
-  },
-  "abd8bc2bba57e982d90201f6bf2323c4" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "99ef580d47044829",
-      "status" : "passed",
-      "time" : {
-        "start" : 1601215241536,
-        "stop" : 1601215245360,
-        "duration" : 3824
+        "start" : 1601379844850,
+        "stop" : 1601379846990,
+        "duration" : 2140
       }
     } ]
   },
@@ -66,12 +47,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "971900c1019ef194",
+      "uid" : "58b4add81afa2354",
       "status" : "passed",
       "time" : {
-        "start" : 1601215226718,
-        "stop" : 1601215236499,
-        "duration" : 9781
+        "start" : 1601379811985,
+        "stop" : 1601379836439,
+        "duration" : 24454
+      }
+    } ]
+  },
+  "abd8bc2bba57e982d90201f6bf2323c4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6f12baeccf8d13e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601379841722,
+        "stop" : 1601379844848,
+        "duration" : 3126
       }
     } ]
   },
@@ -85,41 +85,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "53c5bfaafe9b4e92",
+      "uid" : "1e7cc880f19f7855",
       "status" : "passed",
       "time" : {
-        "start" : 1601215238579,
-        "stop" : 1601215241528,
-        "duration" : 2949
+        "start" : 1601379839033,
+        "stop" : 1601379841718,
+        "duration" : 2685
       }
     } ]
   },
   "33752feb08a003bfadbdc4a4b7468678" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 1,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 2
+      "total" : 1
     },
     "items" : [ {
-      "uid" : "da8d49166fed794c",
-      "status" : "failed",
-      "statusDetails" : "Invalid token entered expected [Activation failed. Please check whether you have entered correct token or contact you system administrator] but found []",
-      "time" : {
-        "start" : 1601215213264,
-        "stop" : 1601215226641,
-        "duration" : 13377
-      }
-    }, {
-      "uid" : "fb41d96164b0b292",
+      "uid" : "ded8e7864df2efac",
       "status" : "broken",
-      "statusDetails" : "Expected condition failed: waiting for visibility of element located by By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[5] (tried for 30 second(s) with 500 milliseconds interval)",
+      "statusDetails" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'MSI', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., databaseEnabled: false, desired: {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., deviceName: Samsung, fullReset: false, isHeadless: true, noReset: false, platformName: android, platformVersion: 10.0.0}, deviceApiLevel: 29, deviceManufacturer: samsung, deviceModel: SM-A605G, deviceName: 31f89655, deviceScreenDensity: 420, deviceScreenSize: 1080x2220, deviceUDID: 31f89655, fullReset: false, isHeadless: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2031, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: 4ba378b4-efa4-459e-b48f-4b4cdb802c13\n*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[4]/android.view.View/android.view.View/android.view.View/android.widget.EditText}",
       "time" : {
-        "start" : 1601214939555,
-        "stop" : 1601214990632,
-        "duration" : 51077
+        "start" : 1601379795158,
+        "stop" : 1601379811846,
+        "duration" : 16688
       }
     } ]
   }

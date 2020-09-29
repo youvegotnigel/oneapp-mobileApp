@@ -30,27 +30,26 @@ public class BaseTests {
 
     public AndroidDriver<MobileElement> driver;
     public WebDriverWait wait;
-
     //create a thread driver
     public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 
     public TokenPage tokenPage;
 
     @BeforeClass
-    public void setup() throws MalformedURLException {
+    public WebDriver setup() throws MalformedURLException {
         String PROJECT_ROOT = System.getProperty("user.dir");
         String ANDROID_APK_PATH = "/src/test/resources/app-debug-qa.apk";
 
         DesiredCapabilities caps = new DesiredCapabilities();
         //Virtual Device
-        caps.setCapability("deviceName", "Pixel 2");
-        caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "11");
+//        caps.setCapability("deviceName", "Pixel 2");
+//        caps.setCapability("platformName", "Android");
+//        caps.setCapability("platformVersion", "11");
 
         //Real Device
-//        caps.setCapability("deviceName", "Samsung");
-//        caps.setCapability("platformName", "Android");
-//        caps.setCapability("platformVersion", "10.0.0");
+        caps.setCapability("deviceName", "Samsung");
+        caps.setCapability("platformName", "Android");
+        caps.setCapability("platformVersion", "10.0.0");
 
         caps.setCapability("app", new File(PROJECT_ROOT + ANDROID_APK_PATH).getAbsolutePath());
         caps.setCapability("appPackage", "com.ncinga.nfactory.on.the.go.mobile");
@@ -58,18 +57,24 @@ public class BaseTests {
         caps.setCapability("noReset", false);
         caps.setCapability("fullReset", false);
 
+        caps.setCapability("isHeadless", true);
+
         URL url = new URL("http://127.0.0.1:4723/wd/hub");
 
         driver = new AndroidDriver<MobileElement>(url, caps);
         wait = new WebDriverWait(driver, 10);
 
-        goHome();
+        tokenPage = new TokenPage(driver);
+
+        //initialize the driver to create a tread
+        tdriver.set(driver);
+        return getDriver();
     }
 
-    @BeforeMethod
-    public void goHome(){
-        tokenPage = new TokenPage(driver);
-    }
+//    @BeforeMethod
+//    public void goHome(){
+//        tokenPage = new TokenPage(driver);
+//    }
 
 
     @AfterClass
@@ -77,16 +82,10 @@ public class BaseTests {
         driver.quit();
     }
 
-    //initialize the driver to create a tread
-    public WebDriver initialize_driver() {
-        tdriver.set(driver);
-        return getDriver();
-    }
 
     //pass the driver in thread
     public static synchronized WebDriver getDriver() {
         return tdriver.get();
     }
-
 
 }

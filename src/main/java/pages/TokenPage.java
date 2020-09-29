@@ -30,8 +30,8 @@ public class TokenPage {
     }
 
     //input token for installation
-    public void setToken(String token){
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    public void setToken(String token) throws InterruptedException {
+        Thread.sleep(15000);
         driver.findElement(tokenTextBox).sendKeys(token);
     }
 
@@ -39,7 +39,6 @@ public class TokenPage {
     public void clickContinue(){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(continueButton).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     //explicit wait
