@@ -28,6 +28,7 @@ public class LoginTests extends BaseTests {
     public void verifyInvalidToken() throws InterruptedException {
 
         tokenPage.setToken("mobile123");
+        Thread.sleep(2000);
         tokenPage.clickContinue();
 
         /**

@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'MSI', ip: '172.17.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., databaseEnabled: false, desired: {app: C:\\Essentials\\TestAutomatio..., appActivity: com.ncinga.nfactory.on.the...., appPackage: com.ncinga.nfactory.on.the...., deviceName: Samsung, fullReset: false, noReset: false, platformName: android, platformVersion: 10.0.0}, deviceApiLevel: 29, deviceManufacturer: samsung, deviceModel: SM-A605G, deviceName: 31f89655, deviceScreenDensity: 420, deviceScreenSize: 1080x2220, deviceUDID: 31f89655, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 2031, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: 6151b40d-4b9e-4d26-9a3f-862603eb24a1\n*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[4]/android.view.View/android.view.View/android.view.View/android.widget.EditText}",
+      "children" : [ {
+        "name" : "Verify invalid token entry",
+        "uid" : "51b93823590e49a7",
+        "parentUid" : "e47f4c51f23a4b7f010bc1f8d8476fc0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1601451325023,
+          "stop" : 1601451326805,
+          "duration" : 1782
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e47f4c51f23a4b7f010bc1f8d8476fc0"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

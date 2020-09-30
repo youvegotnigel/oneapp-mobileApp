@@ -1,0 +1,87 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "login.LoginTests",
+    "children" : [ {
+      "name" : "verifyInvalidToken",
+      "uid" : "51b93823590e49a7",
+      "parentUid" : "4f66b54c0725804ec739c9a3a5b26876",
+      "status" : "broken",
+      "time" : {
+        "start" : 1601451325023,
+        "stop" : 1601451326805,
+        "duration" : 1782
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "verifyEmptyUsernameAndPassword",
+      "uid" : "fcc6966ceffe4ef9",
+      "parentUid" : "4f66b54c0725804ec739c9a3a5b26876",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601451326957,
+        "stop" : 1601451339350,
+        "duration" : 12393
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "verifyEmptyPassword",
+      "uid" : "8f7f0368f4d12ec1",
+      "parentUid" : "4f66b54c0725804ec739c9a3a5b26876",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601451339363,
+        "stop" : 1601451341812,
+        "duration" : 2449
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "verifyEmptyUsername",
+      "uid" : "4f75a763c2027869",
+      "parentUid" : "4f66b54c0725804ec739c9a3a5b26876",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601451341817,
+        "stop" : 1601451344994,
+        "duration" : 3177
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "verifyInvalidCredentials",
+      "uid" : "59198019614edcc4",
+      "parentUid" : "4f66b54c0725804ec739c9a3a5b26876",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601451345002,
+        "stop" : 1601451348812,
+        "duration" : 3810
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "verifySuccessfulLogin",
+      "uid" : "66829353a67cb66e",
+      "parentUid" : "4f66b54c0725804ec739c9a3a5b26876",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601451348826,
+        "stop" : 1601451350826,
+        "duration" : 2000
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "login.LoginTests"
+  } ]
+}

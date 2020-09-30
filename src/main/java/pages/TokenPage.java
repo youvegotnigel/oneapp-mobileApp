@@ -26,8 +26,8 @@ public class TokenPage {
     }
 
     //input token for installation
-    public void setToken(String token) throws InterruptedException {
-        Thread.sleep(15000);
+    public void setToken(String token) {
+        //Thread.sleep(5000);
         driver.findElement(tokenTextBox).sendKeys(token);
     }
 

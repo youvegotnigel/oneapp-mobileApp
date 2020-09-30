@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Sep 30 13:05:26 IST 2020","Wed Sep 30 13:05:39 IST 2020","12393","Default Suite","second-appium-project","login.LoginTests","login.LoginTests","verifyEmptyUsernameAndPassword","Verify invalid login","Verify invalid login"
+"passed","Wed Sep 30 13:05:48 IST 2020","Wed Sep 30 13:05:50 IST 2020","2000","Default Suite","second-appium-project","login.LoginTests","login.LoginTests","verifySuccessfulLogin","Verify valid login","Verify valid login"
+"passed","Wed Sep 30 13:05:39 IST 2020","Wed Sep 30 13:05:41 IST 2020","2449","Default Suite","second-appium-project","login.LoginTests","login.LoginTests","verifyEmptyPassword","Verify invalid login","Verify invalid login"
+"passed","Wed Sep 30 13:05:41 IST 2020","Wed Sep 30 13:05:44 IST 2020","3177","Default Suite","second-appium-project","login.LoginTests","login.LoginTests","verifyEmptyUsername","Verify invalid login","Verify invalid login"
+"passed","Wed Sep 30 13:05:45 IST 2020","Wed Sep 30 13:05:48 IST 2020","3810","Default Suite","second-appium-project","login.LoginTests","login.LoginTests","verifyInvalidCredentials","Verify invalid login","Verify invalid login"
+"broken","Wed Sep 30 13:05:25 IST 2020","Wed Sep 30 13:05:26 IST 2020","1782","Default Suite","second-appium-project","login.LoginTests","login.LoginTests","verifyInvalidToken","Verify invalid token entry","Verify invalid token entry"

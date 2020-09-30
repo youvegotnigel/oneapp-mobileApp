@@ -31,7 +31,7 @@ public class BaseTests {
     public TokenPage tokenPage;
 
     @BeforeClass
-    public WebDriver setup() throws MalformedURLException {
+    public WebDriver setup() throws MalformedURLException, InterruptedException {
         String PROJECT_ROOT = System.getProperty("user.dir");
         String ANDROID_APK_PATH = "/src/test/resources/app-debug-qa.apk";
 
@@ -52,7 +52,7 @@ public class BaseTests {
         caps.setCapability("noReset", false);
         caps.setCapability("fullReset", false);
 
-        caps.setCapability("isHeadless", true);
+        //caps.setCapability("isHeadless", true);
 
         URL url = new URL("http://127.0.0.1:4723/wd/hub");
 
@@ -60,6 +60,7 @@ public class BaseTests {
         wait = new WebDriverWait(driver, 10);
 
         tokenPage = new TokenPage(driver);
+        Thread.sleep(10);
 
         //initialize the driver to create a tread
         tdriver.set(driver);
