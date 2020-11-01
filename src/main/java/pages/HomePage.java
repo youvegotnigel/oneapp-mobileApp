@@ -14,12 +14,14 @@ public class HomePage {
 
     //define elements
     private WebDriver driver;
+    WebDriverWait wait;
+
     //Top part elements
     private By sideMenu = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button");
-    private By pageHeaderName = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]");
+    private By pageHeaderName = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View");
     private By date = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[1]");
-    private By runningPOs = By.xpath("");
-    private By workForce = By.xpath("");
+    private By runningPOs = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View[2]");
+    private By workForce = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View[3]/android.view.View[2]");
 
     //Date pop-up section
     private By popUpDate = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]");
@@ -50,8 +52,57 @@ public class HomePage {
     //get the name of the page header
     public String getPageHeaderName(){
 
-        WebDriverWait wait = new WebDriverWait(driver,60);
+        wait = new WebDriverWait(driver,60);
         wait.until(ExpectedConditions.elementToBeClickable(pageHeaderName));
         return driver.findElement(pageHeaderName).getText();
+    }
+
+    public String getPageDate(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(date));
+        return driver.findElement(date).getText();
+    }
+
+    public String getRunningPO(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(runningPOs));
+        return driver.findElement(runningPOs).getText();
+    }
+
+    public String getWorkForce(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(workForce));
+        return driver.findElement(workForce).getText();
+    }
+
+    public String getFactoryButtonText(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(factoryBtn));
+        return driver.findElement(factoryBtn).getText();
+    }
+
+    public String getDeliveryButtonText(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(deliveryBtn));
+        return driver.findElement(deliveryBtn).getText();
+    }
+
+    public String getQualityButtonText(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(qualityBtn));
+        return driver.findElement(qualityBtn).getText();
+    }
+
+    public String getInsightButtonText(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(insightBtn));
+        return driver.findElement(insightBtn).getText();
     }
 }

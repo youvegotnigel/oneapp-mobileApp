@@ -69,7 +69,8 @@ public class LoginPage {
     }
 
     //pass the driver for the next page
-    public HomePage goToLoginPage() {
+    public HomePage goToHomePage() {
         return new HomePage(driver);
     }
 }
+

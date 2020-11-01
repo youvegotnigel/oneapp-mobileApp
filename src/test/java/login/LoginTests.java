@@ -124,11 +124,11 @@ public class LoginTests extends BaseTests {
     @Test(priority=4, description="Verify valid login")
     @Description("Verify valid login")
     @Severity(SeverityLevel.BLOCKER)
-    public void verifySuccessfulLogin() throws InterruptedException {
+    public void verifySuccessfulLogin(){
 
         //comment out the token entry part in the E2E test cycle
-        tokenPage.setToken("mobile");
-        tokenPage.clickContinue();
+        //tokenPage.setToken("mobile");
+        //tokenPage.clickContinue();
 
         LoginPage login = tokenPage.goToLoginPage();
         Assert.assertEquals(login.getPageHeaderName(),"Member Login","Verify landing page");
@@ -137,7 +137,7 @@ public class LoginTests extends BaseTests {
         login.setPassword("zuno86");
         login.clickLoginBtn();
 
-        Assert.assertEquals(login.goToLoginPage().getPageHeaderName(),"nFactory On the Go","Verify landing on homepage");
+        Assert.assertEquals(login.goToHomePage().getPageHeaderName(),"nFactory On the Go","Verify landing on homepage");
 
     }
 }

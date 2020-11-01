@@ -5,23 +5,63 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import pages.HomePage;
 import pages.LoginPage;
+import utills.AllureListener;
 
 /**
  * @author  : youvegotnigel
  *
  */
 
+@Listeners({AllureListener.class})
 public class HomePageTest extends BaseTests {
 
     @Test(priority=1, description="Verify the landing page after valid credentials")
     @Description("Verify the landing page after valid credentials")
     @Severity(SeverityLevel.NORMAL)
-    public void verifyLandingPageName() throws InterruptedException {
+    public void verifyLandingPageName(){
 
-        LoginPage homepage = tokenPage.goToLoginPage();
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
         Assert.assertEquals(homepage.getPageHeaderName(),"nFactory On the Go","Verify landing on homepage");
+    }
+
+    @Test(priority=1, description="Verify the date of the homepage")
+    @Description("Verify the date of the homepage")
+    @Severity(SeverityLevel.NORMAL)
+    public void verifyHeaderDate(){
+
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
+        Assert.assertEquals(homepage.getPageDate(),"Sunday, November 1, 2020","Date is not correct");
+    }
+
+    @Test(priority=1, description="Verify the running PO's")
+    @Description("Verify the running PO's")
+    @Severity(SeverityLevel.NORMAL)
+    public void verifyPO(){
+
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
+        Assert.assertEquals(homepage.getRunningPO(),"Running PO(s)","Running PO's not correct");
+    }
+
+    @Test(priority=1, description="Verify the workforce")
+    @Description("Verify the Verify the workforce")
+    @Severity(SeverityLevel.NORMAL)
+    public void verifyWorkForce(){
+
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
+        Assert.assertEquals(homepage.getWorkForce(),"Work Force","WorkForce is not correct");
+    }
+
+    @Test(priority=2, description="Verify what is happening section text views")
+    @Description("Verify what is happening section text views")
+    @Severity(SeverityLevel.MINOR)
+    public void verifyFactoryButtonText(){
+
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
+        Assert.assertEquals(homepage.getFactoryButtonText(),"Work Force","WorkForce is not correct");
     }
 
 
