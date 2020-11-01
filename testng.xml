@@ -4,16 +4,8 @@
     <test verbose="2" preserve-order="true"
           name="mobile app automation">
         <classes>
-            <class name="login.LoginTests">
-                <methods>
-                    <include name="verifySuccessfulLogin"/>
-                </methods>
-            </class>
-            <class name="homepage.HomePageTest">
-                <methods>
-                    <include name="verifyLandingPageName"/>
-                </methods>
-            </class>
+            <class name="login.LoginTests"/>
+            <class name="homepage.HomePageTest"/>
         </classes>
     </test>
 </suite>

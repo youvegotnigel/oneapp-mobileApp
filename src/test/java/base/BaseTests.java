@@ -48,7 +48,7 @@ public class BaseTests {
         caps.setCapability("app", new File(PROJECT_ROOT + ANDROID_APK_PATH).getAbsolutePath());
         caps.setCapability("appPackage", "com.ncinga.nfactory.on.the.go.mobile");
         caps.setCapability("appActivity", "com.ncinga.nfactory.on.the.go.mobile.MainActivity");
-        caps.setCapability("noReset", true);
+        caps.setCapability("noReset", false); //change here to clear the cache of the mobile app
         caps.setCapability("fullReset", false);
 
         //caps.setCapability("isHeadless", true);
