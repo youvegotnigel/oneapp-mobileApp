@@ -61,7 +61,34 @@ public class HomePageTest extends BaseTests {
     public void verifyFactoryButtonText(){
 
         HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
-        Assert.assertEquals(homepage.getFactoryButtonText(),"Work Force","WorkForce is not correct");
+        Assert.assertEquals(homepage.getFactoryButtonText(),"FACTORY","Text is invalid");
+    }
+
+    @Test(priority=2, description="Verify what is happening section text views")
+    @Description("Verify what is happening section text views")
+    @Severity(SeverityLevel.MINOR)
+    public void verifyDeliveryButtonText(){
+
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
+        Assert.assertEquals(homepage.getDeliveryButtonText(),"DELIVERY","Text is invalid");
+    }
+
+    @Test(priority=2, description="Verify what is happening section text views")
+    @Description("Verify what is happening section text views")
+    @Severity(SeverityLevel.MINOR)
+    public void verifyQualityButtonText(){
+
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
+        Assert.assertEquals(homepage.getQualityButtonText(),"QUALITY","Text is invalid");
+    }
+
+    @Test(priority=2, description="Verify what is happening section text views")
+    @Description("Verify what is happening section text views")
+    @Severity(SeverityLevel.MINOR)
+    public void verifyInsightButtonText(){
+
+        HomePage homepage = tokenPage.goToLoginPage().goToHomePage();
+        Assert.assertEquals(homepage.getInsightButtonText(),"INSIGHT","Text is invalid");
     }
 
 
