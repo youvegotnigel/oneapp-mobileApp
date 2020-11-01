@@ -25,7 +25,7 @@ public class TokenPage {
     }
 
     //input token for installation
-    public void setToken(String token) throws InterruptedException {
+    public void setToken(String token){
         //Thread.sleep(5000);
         WebDriverWait wait = new WebDriverWait(driver,60);
         wait.until(ExpectedConditions.visibilityOfElementLocated(tokenTextBox));
