@@ -105,4 +105,18 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(insightBtn));
         return driver.findElement(insightBtn).getText();
     }
+
+    public String getSewingDepartmentButtonText(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(sewingDepBtn));
+        return driver.findElement(sewingDepBtn).getText();
+    }
+
+    public String getFinishingDepartmentButtonText(){
+
+        wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(finishingDepBtn));
+        return driver.findElement(finishingDepBtn).getText();
+    }
 }
