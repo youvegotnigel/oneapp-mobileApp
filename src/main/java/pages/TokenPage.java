@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author  : youvegotnigel
@@ -26,26 +25,27 @@ public class TokenPage {
     }
 
     //input token for installation
-    public void setToken(String token) {
+    public void setToken(String token) throws InterruptedException {
         //Thread.sleep(5000);
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(tokenTextBox));
         driver.findElement(tokenTextBox).sendKeys(token);
     }
 
     //click on the continue button
     public void clickContinue(){
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(continueButton));
         driver.findElement(continueButton).click();
     }
 
-    //explicit wait
-    public void explicitWaitForErrorMessage(){
-
-        WebDriverWait wait = new WebDriverWait(driver,60);
-        wait.until(ExpectedConditions.elementToBeClickable(errorMessage));
-    }
 
     //error message for invalid token entry
     public String getErrorMessage(){
+
+        //explicit wait
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.elementToBeClickable(errorMessage));
         return driver.findElement(errorMessage).getText();
     }
 

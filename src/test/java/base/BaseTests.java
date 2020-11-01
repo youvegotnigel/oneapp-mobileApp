@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 import pages.TokenPage;
 
@@ -41,15 +40,15 @@ public class BaseTests {
 //        caps.setCapability("platformName", "Android");
 //        caps.setCapability("platformVersion", "11");
 
-        //Real Device
-        caps.setCapability("deviceName", "Samsung");
+        //Real Device - my Samsung A6+
+        caps.setCapability("deviceName", "31f89655");
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "10.0.0");
 
         caps.setCapability("app", new File(PROJECT_ROOT + ANDROID_APK_PATH).getAbsolutePath());
         caps.setCapability("appPackage", "com.ncinga.nfactory.on.the.go.mobile");
         caps.setCapability("appActivity", "com.ncinga.nfactory.on.the.go.mobile.MainActivity");
-        caps.setCapability("noReset", false);
+        caps.setCapability("noReset", true);
         caps.setCapability("fullReset", false);
 
         //caps.setCapability("isHeadless", true);
@@ -60,7 +59,7 @@ public class BaseTests {
         wait = new WebDriverWait(driver, 10);
 
         tokenPage = new TokenPage(driver);
-        Thread.sleep(10);
+        Thread.sleep(10000);
 
         //initialize the driver to create a tread
         tdriver.set(driver);

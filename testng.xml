@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="one-app-mobile-automation">
-<!--        run on a device without connection from appium  manually -->
-<!--        <parameter name="deviceName" value="Samsung" />-->
-<!--        <parameter name="platformName" value="Android" />-->
-<!--        <parameter name="platformVersion" value="10.0.0" />-->
-<!--        <parameter name="url" value="http://127.0.0.1:4723/wd/hub" />-->
+    <test verbose="2" preserve-order="true"
+          name="mobile app automation">
         <classes>
-            <class name="login.LoginTests"></class>
+            <class name="login.LoginTests">
+                <methods>
+                    <include name="verifySuccessfulLogin"/>
+                </methods>
+            </class>
+            <class name="homepage.HomePageTest">
+                <methods>
+                    <include name="verifyLandingPageName"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
-
-

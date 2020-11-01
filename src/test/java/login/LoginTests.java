@@ -28,7 +28,6 @@ public class LoginTests extends BaseTests {
     public void verifyInvalidToken() throws InterruptedException {
 
         tokenPage.setToken("mobile123");
-        Thread.sleep(2000);
         tokenPage.clickContinue();
 
         /**
@@ -125,17 +124,20 @@ public class LoginTests extends BaseTests {
     @Test(priority=4, description="Verify valid login")
     @Description("Verify valid login")
     @Severity(SeverityLevel.BLOCKER)
-    public void verifySuccessfulLogin() {
+    public void verifySuccessfulLogin() throws InterruptedException {
 
-        //tokenPage.setToken("mobile");
-        //tokenPage.clickContinue();
+        //comment out the token entry part in the E2E test cycle
+        tokenPage.setToken("mobile");
+        tokenPage.clickContinue();
 
         LoginPage login = tokenPage.goToLoginPage();
         Assert.assertEquals(login.getPageHeaderName(),"Member Login","Verify landing page");
 
         login.setUsername("ananta-reports");
-        login.setPassword("zuno-86");
+        login.setPassword("zuno86");
         login.clickLoginBtn();
+
+        Assert.assertEquals(login.goToLoginPage().getPageHeaderName(),"nFactory On the Go","Verify landing on homepage");
 
     }
 }

@@ -7,3 +7,5 @@
 /target
 /test-output
 /first_appium_test.iml
+/allure-results
+/allure-report
