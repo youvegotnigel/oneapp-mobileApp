@@ -19,7 +19,7 @@ import utills.AllureListener;
 @Listeners({AllureListener.class})
 public class HomePageTest extends BaseTests {
 
-    @Test(priority=1, description="Verify valid login")
+    @Test(priority=1, description="Verify valid login", enabled = true)
     @Description("Verify valid login")
     @Severity(SeverityLevel.BLOCKER)
     public void verifySuccessfulLogin(){
@@ -38,7 +38,7 @@ public class HomePageTest extends BaseTests {
 
     }
 
-    @Test(priority=2, description="Verify the landing page after valid credentials")
+    @Test(priority=2, description="Verify the landing page after valid credentials", dependsOnMethods={"verifySuccessfulLogin"})
     @Description("Verify the landing page after valid credentials")
     @Severity(SeverityLevel.NORMAL)
     public void verifyLandingPageName(){
